@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf & Lore - Unique Succulents for Every Home</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="topbar">
+        <p>Summer Sale Get Minimum 25% OFF On All Products at LeafyLux</p>
+    </div>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="./"><img src="images/logo.png" alt="Leaf & Lore"></a>
+            </div>
+            <div class="navbar-links">
+                <div class="sidebar-logo">
+                    <a href="./"><img src="images/logo.png" alt="Leaf & Lore"></a>
+                    <i id="sidebar-close" class="fa-solid fa-xmark"></i>
+                </div>
+                <ul class="links">
+                    <li><a href="./" class="nav-link">Home</a></li>
+                    <li><a href="product-listing.html" class="nav-link">Shop</a></li>
+                    <li><a href="product-listing.html?category=Indoor-Plants" class="nav-link">Indoor Plants</a></li>
+                    <li><a href="product-listing.html?category=Outdoor-Plants" class="nav-link">Outdoor Plants</a></li>
+                    <li><a href="product-listing.html?category=Seeds" class="nav-link">Seeds</a></li>
+                    <li><a href="product-listing.html?category=Pots-and-Planters" class="nav-link">Pots and Planters</a></li>
+                    <li><a href="product-listing.html?category=Accessories" class="nav-link">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="header-search">
+     
+                <a href="wish.html" class="wish-icon"><i class="fa-solid fa-heart" onclick="toggleHeart(this)"></i><span id="wish-count">0</span></a>
+                <a href="cart.html" class="top-cart"><img src="images/cart-icon.png" alt="" onclick="toggleBag(this)"> <span class="cart-count" id="cart-count" >0</span></a>
+                <a href="javascript:void(0)" class="hamburger"><i id="menu-close" class="fa-solid fa-bars"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="./">Home</a> <i class="fa-solid fa-angle-right"></i> <span>Cart</span>
+        </div>
+    </div>
+    
+    <section class="cart-wrapper">
+        <div class="container">
+            <div class="cart-inner">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <div class="cart-heading">
+                        <h2>Your cart</h2>
+                        <a class="conti-shpng-btn" href="product-listing.html"><img src="images/continue-icon.png" alt=""> Continue Shopping</a>
+                    </div>
+                    <div id="cart-list"></div>
+
+                    <!-- <div class="cart-item">
+                        <img src="images/cart-img.jpg" alt="Product">
+                        <div class="cart-info">
+                        <h4>Aglaonema Snow White Plant</h4>
+                        <p>Size: 6" Pot</p>
+                        <p>Price: $32.99 <s>$40.99</s></p>
+                        </div>
+                        <div class="cart-actions">
+                            <div class="unit-total">Unit Total: $32.99</div>
+                            <div class="quantity-section">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="quantity-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Gift Note -->
+                    <div class="gift-note">
+                        <p>Enter a gift note or special delivery instructions below:</p>
+                        <textarea placeholder="Write your special instructions"></textarea>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h3>Cart Total</h3>
+                    <div class="summary-details">
+                        <div class="summary-line"><span>Sub Total</span> <span id="cart-subtotal">$0</span></div>
+                        <div class="summary-line"><span>Delivery charges</span> <span>Free</span></div>
+                        <div class="summary-line"><span>Shipping & Handling</span> <span>$0.00</span></div>
+                        <div class="summary-line total"><span>Total</span> <span id="cart-total">$0.00</span></div>
+                    </div>
+
+                    <div class="delivery-section">
+                        <h3> Apply Promo Code:</h3>
+                        <div class="pincode-input">
+                            <input type="text" placeholder="Apply Promo" class="pincode-field">
+                            <button class="apply-promo-btn">Apply Promo</button>
+                        </div>
+                    </div>
+
+                    <a href="./checkout.html" class="checkout-btn">PROCEED TO CHECKOUT <img src="images/checkout-icon.png" alt=""></a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+     
+        
+
+    
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-newsletter-section">
+            <div class="container">
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="btn btn-primary nwsltr-btn">
+                            <img src="images/send-icon.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                
+                <ul class="footer-menu">
+                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="payment-methods">
+                    <img src="images/cards.png" alt="PayPal">
+                </div>
+                <p>&copy; 2024 Leaf & Lore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="top-menu"><i class="fa-solid fa-angles-up"></i></button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script src="js/cart.js"></script>
+
+</body>
+</html>

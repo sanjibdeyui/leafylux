@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf & Lore - Unique Succulents for Every Home</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="topbar">
+        <p>Summer Sale Get Minimum 25% OFF On All Products at LeafyLux</p>
+    </div>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="./"><img src="images/logo.png" alt="Leaf & Lore"></a>
+            </div>
+            <div class="navbar-links">
+                <div class="sidebar-logo">
+                    <a href="./"><img src="images/logo.png" alt="Leaf & Lore"></a>
+                    <i id="sidebar-close" class="fa-solid fa-xmark"></i>
+                </div>
+                <ul class="links">
+                    <li><a href="./" class="nav-link">Home</a></li>
+                    <li><a href="product-listing.html" class="nav-link">Shop</a></li>
+                    <li><a href="product-listing.html?category=Indoor-Plants" class="nav-link">Indoor Plants</a></li>
+                    <li><a href="product-listing.html?category=Outdoor-Plants" class="nav-link">Outdoor Plants</a></li>
+                    <li><a href="product-listing.html?category=Seeds" class="nav-link">Seeds</a></li>
+                    <li><a href="product-listing.html?category=Pots-and-Planters" class="nav-link">Pots and Planters</a></li>
+                    <li><a href="product-listing.html?category=Accessories" class="nav-link">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="header-search">
+                <!-- <a href="#"><img src="images/search-icon.png" alt=""></a>
+                <a href="#"><img src="images/account-icon.png" alt=""></a> -->
+                <a href="wish.html" class="wish-icon"><i class="fa-solid fa-heart" onclick="toggleHeart(this)"></i><span id="wish-count">0</span></a>
+                <a href="cart.html" class="top-cart"><img src="images/cart-icon.png" alt="" onclick="toggleBag(this)"> <span class="cart-count" id="cart-count" >0</span></a>
+                <a href="javascript:void(0)" class="hamburger"><i id="menu-close" class="fa-solid fa-bars"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    
+   
+    
+    <section class="cart-wrapper">
+         <div class="breadcrumb">
+            <div class="container">
+                <a href="#">Home</a> <i class="fa-solid fa-angle-right"></i> <a href="#">Indoor Plants</a> <i class="fa-solid fa-angle-right"></i> <span>Aglaonema...</span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="cart-inner">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <div class="cart-heading">
+                        <h2>Delivery Details:</h2>
+                    </div>
+
+                    <form id="orderForm">
+                        <div id="deliveryForm" class="form-section">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name:</label>
+                                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name:</label>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Id:</label>
+                                    <input type="email" id="email" name="email" placeholder="Email Id: ie. name@example.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number:</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Phone Number: ie. 8XXXXXXXXX" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="country">Country / Region:</label>
+                                    <input type="text" id="country" name="country" placeholder="Country / Region" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State:</label>
+                                    <input type="text" id="state" name="state" placeholder="State" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pinCode">PIN Code:</label>
+                                    <input type="text" id="pinCode" name="pinCode" placeholder="PIN Code" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City:</label>
+                                    <input type="text" id="city" name="city" placeholder="City" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="address">Address:</label>
+                                <textarea id="address" name="address" placeholder="Address" required></textarea>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="apartment">Apartment:</label>
+                                <input type="text" id="apartment" name="apartment" placeholder="Apartment, suite, etc. (optional)">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="landmark">Nearest Landmark:</label>
+                                <input type="text" id="landmark" name="landmark" placeholder="Nearest Landmark">
+                            </div>
+
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="sameAsShipping" name="sameAsShipping">
+                                <label for="sameAsShipping">Billing Same As Shipping Address</label>
+                            </div>
+                        
+                        </div>
+
+                        <!-- Payment Section -->
+                        <div class="form-section payment-section">
+                            <div class="cart-heading">
+                                <h2>Payment Details:</h2>
+                            </div>
+                            
+                            <div class="payment-options">
+                                <div class="payment-option" onclick="selectPayment('credit')">
+                                    <input type="radio" id="creditCard" name="paymentMethod" value="credit">
+                                    <div class="payment-option-content">
+                                        <div class="payment-option-title">Credit Cards</div>
+                                    </div>
+                                    <div class="card-icons">
+                                        <img src="images/cards.png" alt="PayPal">
+                                    </div>
+                                </div>
+
+                                <div id="cardDetails" class="card-details">
+                                    <div class="form-row">
+                                        <div class="form-group full-width">
+                                            <label for="cardNumber">Card Number:</label>
+                                            <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="expDate">Exp. Date:</label>
+                                            <input type="text" id="expDate" name="expDate" placeholder="MM/YY" maxlength="5">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cvv">CVV:</label>
+                                            <input type="text" id="cvv" name="cvv" placeholder="CVV: ie. XXX" maxlength="4">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="payment-option other-payment-option" onclick="selectPayment('other')">
+                                    <input type="radio" id="otherPayment" name="paymentMethod" value="other">
+                                    <div class="payment-option-content">
+                                        <div class="payment-option-title">Other Payments (UPI, Cards, Wallets, NetBanking)</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </form>
+
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h3>Order Summary:</h3>
+                    <div id="product-list"></div>
+                    
+
+                    <div class="summary-details">
+                        <div class="summary-line"><span>Sub Total</span> <span id="cart-subtotal">$0.00</span></div>
+                        <div class="summary-line"><span>Delivery charges</span> <span>Free</span></div>
+                        <div class="summary-line"><span>Shipping & Handling</span> <span>$0.00</span></div>
+                        <div class="summary-line total"><span>Total</span> <span id="cart-total">$0.00</span></div>
+                    </div>
+
+                    <button class="checkout-btn">Place Order</button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-newsletter-section">
+            <div class="container">
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="btn btn-primary nwsltr-btn">
+                            <img src="images/send-icon.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                
+                <ul class="footer-menu">
+                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="payment-methods">
+                    <img src="images/cards.png" alt="PayPal">
+                </div>
+                <p>&copy; 2024 Leaf & Lore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="top-menu"><i class="fa-solid fa-angles-up"></i></button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/checkout.js"></script>
+    
+<script>
+         function selectPayment(type) {
+            // Remove selected class from all options
+            document.querySelectorAll('.payment-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked option
+            event.currentTarget.classList.add('selected');
+            
+            // Show/hide card details
+            const cardDetails = document.getElementById('cardDetails');
+            if (type === 'credit') {
+                cardDetails.classList.add('active');
+                document.getElementById('creditCard').checked = true;
+            } else {
+                cardDetails.classList.remove('active');
+                document.getElementById('otherPayment').checked = true;
+            }
+        }
+
+      
+
+        // function submitOrder() {
+        //     // Get form data
+        //     const firstName = document.getElementById('firstName').value;
+        //     const lastName = document.getElementById('lastName').value;
+        //     const email = document.getElementById('email').value;
+        //     const phone = document.getElementById('phone').value;
+        //     const address = document.getElementById('address').value;
+        //     const apartment = document.getElementById('apartment').value;
+        //     const city = document.getElementById('city').value;
+        //     const state = document.getElementById('state').value;
+        //     const country = document.getElementById('country').value;
+        //     const pinCode = document.getElementById('pinCode').value;
+
+        //     // Basic validation
+        //     if (!firstName || !lastName || !email || !phone || !address || !city || !state || !country || !pinCode) {
+        //         alert('Please fill in all required fields.');
+        //         return;
+        //     }
+
+        //     // Update confirmation details
+        //     document.getElementById('confirmEmail').textContent = email;
+        //     document.getElementById('confirmPhone').textContent = phone;
+        //     document.getElementById('confirmName').textContent = firstName + ' ' + lastName;
+        //     document.getElementById('confirmBillingName').textContent = firstName + ' ' + lastName;
+            
+        //     const fullAddress = address + (apartment ? '\n' + apartment : '') + '\n' + city + ', ' + state + ' ' + pinCode;
+        //     document.getElementById('confirmAddress').innerHTML = fullAddress.replace(/\n/g, '<br>');
+        //     document.getElementById('confirmBillingAddress').innerHTML = fullAddress.replace(/\n/g, '<br>');
+
+        //     // Update payment method
+        //     const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+        //     if (paymentMethod) {
+        //         if (paymentMethod.value === 'credit') {
+        //             document.getElementById('confirmPayment').textContent = 'Credit Card';
+        //         } else {
+        //             document.getElementById('confirmPayment').textContent = 'Other Payment Method';
+        //         }
+        //     } else {
+        //         document.getElementById('confirmPayment').textContent = 'Cash on delivery';
+        //     }
+
+        //     // Hide form and show confirmation
+        //     document.getElementById('deliveryForm').style.display = 'none';
+        //     document.querySelector('.payment-section').style.display = 'none';
+        //     document.getElementById('confirmationSection').classList.add('active');
+        // }
+
+        function showForm() {
+            // Show form and hide confirmation
+            document.getElementById('deliveryForm').style.display = 'block';
+            document.querySelector('.payment-section').style.display = 'block';
+            document.getElementById('confirmationSection').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
