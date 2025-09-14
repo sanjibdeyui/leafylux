@@ -636,7 +636,7 @@ header .navbar .navbar-links .sidebar-logo {
     background: white;
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .testimonial-header {
@@ -794,6 +794,7 @@ header .navbar .navbar-links .sidebar-logo {
     justify-content: center;
     gap: 1rem;
     margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 .footer-content ul li {
@@ -1041,6 +1042,7 @@ header .navbar .navbar-links .sidebar-logo {
     box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.15);
     border-radius: 30px;
     padding: 0 7px;
+    justify-content: space-between;
 }
 
 .qty-btn, .qty-btn:hover {
@@ -1081,7 +1083,8 @@ header .navbar .navbar-links .sidebar-logo {
     justify-content: center;
     gap: 1rem;
     padding: 15px 5px;
-        height: 50px;
+    height: 50px;
+    width: 100%;
 }
 
 .add-to-cart-btn:hover {
@@ -1439,6 +1442,9 @@ header .navbar .navbar-links .sidebar-logo {
         flex-direction: column;
         text-align: center;
     }
+    .highlight-icon{
+            width: 100%;
+    }
     
     .care-features {
         flex-direction: column;
@@ -1446,6 +1452,9 @@ header .navbar .navbar-links .sidebar-logo {
     
     .feature {
         min-width: auto;
+    }
+    .feature + .feature{
+        border-left: 0;
     }
     
     .products-grid {
@@ -2231,6 +2240,7 @@ hr {
     padding: 20px;
     line-height: 40px;
     transition: all 0.5s ease;
+    overflow-y: auto;
   }
 
   /* header .navbar .logo a {
@@ -2245,6 +2255,9 @@ hr {
     align-items: center;
     justify-content: space-between;
   }
+  .sidebar-logo img {
+    filter: brightness(0) invert(1);
+    }
 
   header .navbar .navbar-links .sidebar-logo a {
     font-size: 24px;
